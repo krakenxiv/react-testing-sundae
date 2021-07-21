@@ -10,7 +10,6 @@ function App() {
       <OrderDetailsProvider>
         {/* summary and entry page need provider */}
         <h1>Design Your Sundae!</h1>
-        <h3>Scoops</h3>
         <OrderEntry />
         <h3>Toppings</h3>
         <SummaryForm />

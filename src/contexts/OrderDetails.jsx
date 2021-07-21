@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useMemo, useEffect } from 'react';
-import { priceOPerItem } from '../constants';
+import { pricePerItem } from '../constants';
 
 // format numbers as currency
 const formatCurrency = (amount) => {
@@ -31,7 +31,7 @@ const calculateSubtotal = (optionType, optionCounts) => {
     optionCount += count;
   }
 
-  return optionCount * priceOPerItem[optionType];
+  return optionCount * pricePerItem[optionType];
 };
 
 export const OrderDetailsProvider = (props) => {
@@ -52,7 +52,6 @@ export const OrderDetailsProvider = (props) => {
     const scoopsSubtotal = calculateSubtotal('scoops', optionCounts);
     const toppingsSubtotal = calculateSubtotal('toppings', optionCounts);
     const grandTotal = scoopsSubtotal + toppingsSubtotal;
-
     setTotals({
       scoops: formatCurrency(scoopsSubtotal),
       toppings: formatCurrency(toppingsSubtotal),
