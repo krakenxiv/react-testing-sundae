@@ -22,7 +22,7 @@ const SummaryForm = () => {
     </span>
   );
   return (
-    <Form>
+    <Form style={{ marginTop: '100px' }}>
       <Form.Group controlId="terms-and-conditions">
         <Form.Check
           type="checkbox"
